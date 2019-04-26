@@ -12,9 +12,7 @@ class Anagram
     match_word = []
     array.each do |target|
       if target.length == word_array.length
-        if target.split("").sort == word_array
-          match_word << target
-        end
+        match_word << target if target.split("").sort == word_array
       end
     end
     match_word
